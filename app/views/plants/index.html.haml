@@ -1,0 +1,37 @@
+%h1 Listing plants
+
+%table
+  %tr
+    %th Name
+    %th Latin
+    %th En
+    %th Common names
+    %th Men
+    %th Gang
+    %th Mu
+    %th Ke
+    %th Shu
+    %th Slug
+    %th
+    %th
+    %th
+
+  - @plants.each do |plant|
+    %tr
+      %td= plant.name
+      %td= plant.latin
+      %td= plant.en
+      %td= plant.common_names
+      %td= plant.men
+      %td= plant.gang
+      %td= plant.mu
+      %td= plant.ke
+      %td= plant.shu
+      %td= plant.slug
+      %td= link_to 'Show', plant
+      %td= link_to 'Edit', edit_plant_path(plant)
+      %td= link_to 'Destroy', plant, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Plant', new_plant_path

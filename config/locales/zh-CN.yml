@@ -1,0 +1,43 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+zh-CN:
+  appname: "斗奇网"
+  Back: 返回
+  breadcrumbs:
+    posts: 帖子
+    overview: 概览
+  enumerize:
+    post_type:
+      discussion: 讨论
+      question: 疑问
+      idea: 建议
+      problem: 故障
+    post_status:
+      open: 开放讨论
+      closed: 已关闭的讨论
+      unanswered: 暂无解答的疑问
+      answered: 已解答的疑问
+      consideration: 暂未处理的建议
+      planned: 已在计划中的建议
+      completed: 已完成的建议
+      rejected: 已否绝的建议
+      active: 暂未解决的故障
+      solved: 已解决的故障
+  posts:
+    type:
+      popular_discussions: 热门讨论
+      popular_questions: 常见问题
+      popular_ideas: 热点建议
+      popular_problems: 常见故障
+      recent_discussions: 最新讨论
+      recent_questions: 最新问题
+      recent_ideas: 最新建议
+      recent_problems: 最新故障
+    links:
+      new_discussion: "发起讨论"
+      new_question: "我要提问"
+      new_idea: "我要提建议"
+      new_problem: "我要报故障"
+    index:
+      title: 帖子

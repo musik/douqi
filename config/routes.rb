@@ -1,4 +1,6 @@
 Douqi::Application.routes.draw do
+  resources :plants
+
   authenticated :user do
     root :to => 'home#index'
   end

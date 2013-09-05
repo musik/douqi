@@ -5,7 +5,6 @@
       %title= content_for?(:title) ? yield(:title) : "Douqi"
       %meta{:content => content_for?(:description) ? yield(:description) : "Douqi", :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
-        = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
@@ -18,8 +17,11 @@
         .content
           .row
             .span12
+              -if show_title?
+                %h1=yield :header
               = render 'layouts/messages'
               = yield
           %footer
       / ! end of .container
     / ! end of #main
+    = javascript_include_tag "application"

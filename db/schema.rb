@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130630134627) do
+ActiveRecord::Schema.define(:version => 20130630191604) do
+
+  create_table "plants", :force => true do |t|
+    t.string   "name"
+    t.string   "latin"
+    t.string   "en"
+    t.string   "common_names"
+    t.string   "men"
+    t.string   "gang"
+    t.string   "mu"
+    t.string   "ke"
+    t.string   "shu"
+    t.string   "slug"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"

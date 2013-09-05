@@ -1,0 +1,17 @@
+= simple_form_for(@plant) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :latin
+    = f.input :en
+    = f.input :common_names
+    = f.input :men
+    = f.input :gang
+    = f.input :mu
+    = f.input :ke
+    = f.input :shu
+    = f.input :slug
+
+  .form-actions
+    = f.button :submit

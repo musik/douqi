@@ -1,0 +1,26 @@
+-title @plant.name
+.row  
+  .span3  
+    %table.table.table-bordered
+      %tr
+        %th 拉丁学名
+        %td=@plant.latin
+      %tr
+        %th 英文名
+        %td=@plant.en
+      %tr
+        %th 中文别名
+        %td=@plant.common_names
+      -%w(men gang mu ke shu).each_with_index do |key,i|
+        %tr
+          %th
+            =("&nbsp;"*i*2).html_safe
+            =t "activerecord.attributes.plant.#{key}"
+          %td
+            =@plant.send key
+.clearfix          
+
+-if can? :manage,Plant
+  = link_to 'Edit', edit_plant_path(@plant)
+  \|
+= link_to t('Back'), plants_path
