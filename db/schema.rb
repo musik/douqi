@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130630191604) do
 
   create_table "plants", :force => true do |t|
-    t.string   "name"
+    t.string   "name",         :null => false
     t.string   "latin"
     t.string   "en"
     t.string   "common_names"
@@ -23,10 +23,12 @@ ActiveRecord::Schema.define(:version => 20130630191604) do
     t.string   "mu"
     t.string   "ke"
     t.string   "shu"
-    t.string   "slug"
+    t.string   "slug",         :null => false
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  add_index "plants", ["slug"], :name => "index_plants_on_slug"
 
   create_table "roles", :force => true do |t|
     t.string   "name"

@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Plant do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should " do
+    #p = Plant.create name: '11',slug: 'junzilan'
+    #pp p.to_param
+    #pp Plant.find "junzilan"
+    #pp Plant.find "1"
+  end
 end

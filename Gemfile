@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 ruby '1.9.3'
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.14'
 gem 'mysql2'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -53,3 +53,7 @@ gem 'devise-i18n-views'
 gem 'kaminari'
 gem 'breadcrumbs'
 gem "enumerize", "~> 0.3.0"
+
+gem 'typhoeus'
+gem 'nokogiri'
+gem 'resque'

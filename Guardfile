@@ -23,7 +23,7 @@ end
 
 guard 'rails',:port=>5001,:server=>'thin' do
   watch('Gemfile.lock')
-  watch(%r{^(config/initializers|lib)/.*})
+  watch(%r{^(config/initializers|lib/reload)/.*})
 end
 
 

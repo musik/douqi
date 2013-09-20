@@ -1,7 +1,7 @@
 class CreatePlants < ActiveRecord::Migration
   def change
-    create_table :plants do |t|
-      t.string :name
+    create_table :plants,:options=>'auto_increment = 5826' do |t|
+      t.string :name,:null=>false
       t.string :latin
       t.string :en
       t.string :common_names
@@ -10,9 +10,10 @@ class CreatePlants < ActiveRecord::Migration
       t.string :mu
       t.string :ke
       t.string :shu
-      t.string :slug
+      t.string :slug, :null=> false
 
       t.timestamps
     end
+    add_index :plants,:slug,:uniq=>true
   end
 end
